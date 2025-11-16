@@ -11,13 +11,14 @@ def menu():
           ''')
 
 def sair_instrucao():
-        sair = input('Apenas digite OK, quando voce ja ter lido tudo!')
+                input('Apenas digite OK, quando voce ja ter lido tudo! ')
 
 def instrucoes_quiz():
                     
                     print ("Ok, te passarei as instruções!")
                     time.sleep(3)
-                    os.system("Cls")
+                    
+                    apagar_menu()
 
 
                     print('''📜 INSTRUÇÕES DO QUIZ
@@ -55,20 +56,12 @@ def instrucoes_quiz():
                       Sair''')
                     sair_instrucao()
 
-                    
-def retornar_menu():
-            time.sleep(3)
-            print("Deseja retornar ao menu?")
-            retornar_opcao = input("(s/n) ")
-            if retornar_opcao == "S":
-                    menu()
-                    resposta_menu = input()
-            else:
-                sys.exit()
 
 def opcao_errada():
         print("Opção errada! Tente novamente.")
         time.sleep(2)
-        os.system("cls")
         menu()
         resposta_menu = int(input())
+
+def apagar_menu():
+        os.system('clear')

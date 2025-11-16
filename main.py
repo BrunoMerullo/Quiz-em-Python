@@ -1,35 +1,41 @@
 import functions
+import os
 import sys
 
-print("Olá! Bem Vindo ao meu quiz.", end='')
-functions.menu()
+resposta_menu = 1
 
-resposta_menu = int(input())
 
-while resposta_menu >= 4 or resposta_menu < 1 in range (True):
-        if resposta_menu >= 4 or resposta_menu < 1:
+while not(resposta_menu == 3) :
+        functions.apagar_menu()
+        functions.menu()
+        resposta_menu = int(input())
 
-                functions.opcao_errada
+        if resposta_menu == 1:
+                        functions.apagar_menu()
+                        print("Ok, vamos jogar!")
+                        input("Digite 1 para começar a jogar!")
+                        
+                        
 
-                retornar_opcao = input("(s/n) ")
-                if retornar_opcao == "S":
-                    functions.menu()
-                    resposta_menu = input()
-                else:
-                        sys.exit()
+        elif resposta_menu == 2:
+                        functions.apagar_menu()
+                        functions.instrucoes_quiz()
+                        
+                        
+        elif resposta_menu == 3:
+                print('Ok, adeus!')
+                break   
 
+        else:
+            print('Erro')
+
+            
+            
+                
+                        
+
+                
         
-if resposta_menu == 1:
-        print("Ok, vamos jogar!")
-        functions.retornar_menu()
-
-elif resposta_menu == 2:
-        functions.instrucoes_quiz
-        functions.retornar_menu()
-else:
-    print('Ok, adeus!')
-    sys.exit()    
-
 
     
 
