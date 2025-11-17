@@ -1,6 +1,7 @@
 import os
 import sys
 import time
+import perguntas
 
 def menu():
           print('''
@@ -9,6 +10,16 @@ def menu():
 2 - Instruções
 3 - Sair
           ''')
+
+def jogar_dificuldades():
+                jogar_dificuldades = '''
+1 -- Fácil
+2 -- Médio
+3 -- Dificíl
+                                        '''
+                print(jogar_dificuldades)
+                
+                
 
 def sair_instrucao():
                 input('Apenas digite OK, quando voce ja ter lido tudo! ')
@@ -65,3 +76,23 @@ def opcao_errada():
 
 def apagar_menu():
         os.system('clear')
+
+def iniciar_quiz_facil():
+        pontos = 0
+        for p in perguntas.perguntas_faceis:
+                        apagar_menu()
+                        print(p["pergunta"])
+                        print("a)", p["a"])
+                        print("b)", p["b"])
+                        print("c)", p["c"])
+                        print("d)", p["d"])
+                        resposta = input("Sua resposta é: ").lower()
+                        if resposta == p["correta"]:
+                                        print("Parabéns! você ACERTOU!!!")
+                                        pontos = + 1
+                                        time.sleep(2)
+                        else:
+                            print("Bahh, você errou!")
+                        
+                        print(f"Sua pontuação final foi: {pontos}")
+        
