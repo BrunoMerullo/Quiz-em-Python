@@ -84,7 +84,8 @@ perguntas_faceis = [
         "correta": "a"
     }
 ]
-print(perguntas_faceis["pergunta"])
+# for pergunta in perguntas_faceis:
+#    print(pergunta["pergunta"])
 
 
 perguntas_medias = [
